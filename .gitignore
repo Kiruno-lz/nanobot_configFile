@@ -1,0 +1,8 @@
+workspace/SECRET.md
+
+history
+history/**
+sessions
+sessions/**
+
+config.json
