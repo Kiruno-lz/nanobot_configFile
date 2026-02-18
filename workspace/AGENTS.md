@@ -11,10 +11,13 @@
 1.  **Read/Create Manifests**:
     - `PROJECT_STATUS.md`: High-level goals, current phase (User-facing).
     - `NANOBOT_TASK.md`: Granular execution steps, logs, debug info (Agent-facing).
-2.  **Credentials**:
+2.  **Version Control Setup**:
+    - Check for `.git` directory. If not present, run `git init`.
+    - Create a `.gitignore` file with sensible defaults for the project type (e.g., Python, Node.js).
+3.  **Credentials**:
     - **Read `SECRET.md`**: Load necessary API keys/tokens from `/Users/kiruno/.nanobot/workspace/SECRET.md`.
     - **Security**: NEVER print keys to logs or commit them to code. Inject as environment variables.
-3.  **Environment Strategy**:
+4.  **Environment Strategy**:
     - Check `ENVIRONMENTS.md`. Can an existing environment be reused?
     - If yes -> Reuse and update entry.
     - If no -> Create new Conda env `nanobot_env_<name>`, install deps, and register in `ENVIRONMENTS.md`.
@@ -30,11 +33,24 @@
     - Consolidate logic.
     - Add comments and docstrings.
     - Ensure code is "Masterpiece" quality.
+6.  **Commit Changes**:
+    - After a logical unit of work is stable (e.g., a feature is complete, a bug is fixed), stage and commit changes.
+    - **Commit Message Standard**: MUST follow the **Conventional Commits** specification.
+      - Format: `<type>[optional scope]: <description>`
+      - Examples:
+        - `feat: Add user login endpoint`
+        - `fix: Correct calculation error in payment module`
+        - `refactor: Simplify database connection logic`
+        - `test: Add unit tests for user model`
+        - `docs: Update API documentation for /users`
 
 ## Phase 3: Delivery & Deployment
 1.  **Deployment**:
     - Use `screen -S nanobot_<project_name>` for background execution.
     - Verify service health (Health Check).
-2.  **Documentation**:
+2.  **Final Commit & Tagging**:
+    - Make a final commit for any deployment-related changes.
+    - Create a git tag for the release (e.g., `git tag -a v1.0.0 -m "Initial release"`).
+3.  **Documentation**:
     - Update `PROJECT_STATUS.md` with "Completed".
     - Update `ENVIRONMENTS.md` if deps changed.
