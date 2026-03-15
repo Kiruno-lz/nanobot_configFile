@@ -1,35 +1,47 @@
-# Updated Long‑term Memory
+# Updated Long‑term Memory (2026-03-11 18:40)
 
-## ClawChat‑Heartbeat
-- Project root: `/Users/kiruno/tmp/workspace/clawdchat-heartbeat`
-- Contains `heartbeat.py`, `clawdchat‑heartbeat.plist.nanobot`, `HEARTBEAT_SETUP.md`
-- LaunchAgent configured to run `/Users/kiruno/miniconda3/envs/nanobot-heartbeat/bin/python` with proper PATH and PYTHONPATH.
-- Log written to `~/.nanobot/heartbeat.log`.  Heartbeat script now includes exponential retry logic.
+## Project Status Summary
+**Current Date**: 2026-03-11 Wednesday, CST
+**Note**: Previous project paths in MEMORY.md were incorrect. Projects not found at recorded locations.
 
-## sol_usdt_liveline
-- New project layout:
+### 1. nanobot Core Infrastructure
+- **Working Directory**: `/Users/kiruno/.nanobot/workspace`
+- **Memory Files**:
+  - Long-term: `memory/MEMORY.md`
+  - History Log: `memory/HISTORY.md` (grep-searchable)
+- **Skills**: Located in `skills/` subfolder
+  - Available skills: clawchat, git-essentials, self-improving-agent
+
+### 2. Archived Projects (Deleted by User)
+#### ClawChat‑Heartbeat (Status: Deleted)
+- **Last Known Path**: `/Users/kiruno/tmp/workspace/clawdchat-heartbeat`
+- **Deletion Date**: 2026-03-11
+- **Components**:
+  - `heartbeat.py` – Heartbeat script with exponential retry logic
+  - `clawdchat‑heartbeat.plist.nanobot` (LaunchAgent)
+  - `HEARTBEAT_SETUP.md` – Setup documentation
+  - Log: `~/.nanobot/heartbeat.log`
+
+#### sol_usdt_liveline (Status: Deleted)
+- **Last Known Path**: `/Users/kiruno/tmp/workspace/sol_usdt_liveline`
+- **Deletion Date**: 2026-03-11
+- **Components**:
   - `src/backend/` – FastAPI server
   - `src/frontend/` – static front‑end
-  - `config/config.yaml.example` – YAML config template
-  - `scripts/` – `run.sh`, `restart.sh`, `test.sh`
-  - `Dockerfile` – multi‑stage build for Apple‑Silicon
-  - `docker‑compose.yml` – single‑command deployment
-  - `README.md` – extended with Docker, CI, and usage sections
-  - `.github/workflows/ci.yml` – GitHub Actions for lint, type‑check, tests, and image build
-- All tests run successfully with `./scripts/test.sh`.
+  - `config/config.yaml.example`
+  - `scripts/run.sh`, `restart.sh`, `test.sh`
+  - `Dockerfile` (Apple‑Silicon optimized)
+  - `docker-compose.yml`
+  - `.github/workflows/ci.yml`
 
-## MoChat Skill Registration
-- Skill definition read from `https://raw.githubusercontent.com/HKUDS/MoChat/.../skill.md`.
-- User wants to register as `kirunoBot`.
-- Self‑registration attempted via `POST https://mochat.io/api/selfRegister` returned 404; service not found.
-- Proposed steps:
-  - Verify correct endpoint; may need `/api/v1/selfRegister` or similar.
-  - If available, send JSON `{"name":"kirunoBot"}`.
-  - Store resulting `clawToken` and `agentUserId` in `~/.nanobot/config.json` under `channels.mochat`.
-  - Bind owner via `POST https://mochat.io/api/claw/agents/bind` with email.
-  - Send DM with `POST https://mochat.io/api/claw/messages`.
+#### MoChat Skill Registration (Status: Blocked)
+- **Target**: Register as `kirunoBot`
+- **Issue**: 404 error on `POST https://mochat.io/api/selfRegister`
+- **Next Steps**:
+  - Verify correct endpoint (`/api/v1/selfRegister`?)
+  - Store credentials in `~/.nanobot/config.json` under `channels.mochat`
+  - Bind owner via email
 
-## General Notes
-- All projects follow the ‘system engineering’ guideline: keep files in dedicated project subfolders, perform operations atomically, and document changes.
-- The assistant will now focus on resolving the MoChat registration error, possibly by querying the MoChat API documentation or using a local mock.
-
+### 3. General Notes
+- All projects follow the 'system engineering' guideline: keep files in dedicated project subfolders, perform operations atomically, and document changes.
+- **Action Item**: Projects need to be re-discovered or recreated at their correct locations.

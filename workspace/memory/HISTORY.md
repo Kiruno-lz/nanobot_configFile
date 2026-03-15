@@ -12,3 +12,6 @@
 
 [2026-03-04 21:16] User requested to register the nanobot skill on MoChat with name kirunoBot. Assistant attempted selfRegister but received 404 ServiceNotFoundError. Previously, the ClawChat‑Heartbeat project was consolidated into /Users/kiruno/tmp/workspace/clawdchat-heartbeat with full launch agent, config, and logs. The sol_usdt_liveline project was reorganized into a production‑ready layout with src, config, scripts, Dockerfile, docker‑compose, CI workflow, and updated README. The assistant provided detailed instructions for MoChat registration, binding, and DM messaging, and prepared scripts for local deployment. The MoChat selfRegister endpoint was not found, indicating either a wrong URL or missing service; further steps will involve confirming the correct API path or using a local mock. The memory update includes these new project structures and the failed registration attempt.
 
+[2026-03-11 18:40] Project path verification completed. All previously recorded project paths do not exist. MEMORY.md updated to reflect current status.
+[2026-03-11 18:58] User confirmed deletion of ClawChat-Heartbeat and sol_usdt_liveline projects. MEMORY.md updated to archive them with 'Deleted' status.
+[2026-03-15 14:11] Added work policy to use 'default' conda environment for all Python/pip commands. Modified files: ~/.zshrc, ENVIRONMENTS.md
