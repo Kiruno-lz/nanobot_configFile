@@ -1,7 +1,7 @@
 # Conda Environment Registry
 
 ## Work Policy
-> **⚙️ Python/pip Execution Rule**: All Python and pip commands should use the `default` conda environment by default. The shell automatically activates this environment on startup.
+> **⚙️ Python/pip Execution Rule**: All Python and pip commands should use the `default` conda environment by default.
 
 ### PATH Configuration
 ```bash
