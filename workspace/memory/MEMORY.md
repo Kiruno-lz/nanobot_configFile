@@ -1,9 +1,7 @@
 # Long‑term Memory (Updated as of 2026-03-15)
 
 ## Project Status Summary
-- **ClawChat‑Heartbeat** – Deleted on 2026-03-11. Last known path `/Users/kiruno/tmp/workspace/clawdchat-heartbeat`.
-- **sol_usdt_liveline** – Deleted on 2026-03-11. Last known path `/Users/kiruno/tmp/workspace/sol_usdt_liveline`.
-- **MeloSeed** – Next‑js project located at `~/Documents/_code/vibe/MeloSeed`. Successfully started (`npm run dev`) on port 3001. Generated music via "Germinate Seed" button; generation in progress.
+- **MeloSeed** – Next‑js music generation project located at `~/Documents/_code/vibe/MeloSeed`. Project completed: can successfully started (`npm run dev`) on port 3000. Generated music via "Germinate Seed" button; generation completed.
 
 ## Environment & Tooling
 - **Conda Environments**: `default` (Python 3.13, contains sumy, nltk, tmux), `nanobot`, `nanobot-heartbeat`, `3dprinting`, `flamingo`, `memU`.

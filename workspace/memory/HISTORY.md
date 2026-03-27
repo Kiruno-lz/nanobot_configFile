@@ -2,10 +2,6 @@
 
 [2026-02-14 10:57] The user reminded that Python execution must use a dedicated conda environment, pointing out that the current clawdchat-heartbeat.plist.nanobot script still references the system python interpreter. This raises concerns about missing dependencies and version mismatches. I will update the plist to invoke the python binary from the 'nanobot-heartbeat' conda environment and record this requirement in the memory documentation.
 
-[2026-02-14 10:48] The user asked to reorganize and detail the assistant’s long‑term memory, requesting a point‑by‑point list of all stored facts. This prompted clarification on the existing automation configuration for `heartbeat.py`, including use of the dedicated Conda environment, required modifications to the LaunchAgent plist file, steps to locate the Python interpreter path, update `ProgramArguments` and `EnvironmentVariables`, copy the plist to `~/Library/LaunchAgents`, load it with `launchctl`, and monitor logs. The discussion also covered checking environment paths and confirming reproducibility of the script execution.
-
-[2026-02-14 11:12] The user clarified that the heartbeat script and ClawChat claim belong to the same project and issued new operational principles. They require autonomous execution with immediate testing, cautious deletion using mv/trash, and a system‑engineering approach where each task is placed in its own project folder under the workspace. After each operation they demand self‑review to correct any errors.
-
 [2026-03-11 18:40] Project path verification completed. All previously recorded project paths do not exist. MEMORY.md updated to reflect current status.
 [2026-03-11 18:58] User confirmed deletion of ClawChat-Heartbeat and sol_usdt_liveline projects. MEMORY.md updated to archive them with 'Deleted' status.
 [2026-03-15 14:11] Added work policy to use 'default' conda environment for all Python/pip commands. Modified files: ~/.zshrc, ENVIRONMENTS.md
